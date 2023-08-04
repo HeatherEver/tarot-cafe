@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+
+#root {
+  background-color: black;
+  max-width: 1800px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body{
+ margin: 0px;
+ padding: 0px;
+}
+
+.app { 
+  margin: 0px;
+  padding:0px;
+}
+
+.tarot-list-container {
+  display: grid;
+  grid-template-columns:  repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  padding-right: 40px;
+ 
+}
+
+.card {
+  position: relative;
+  perspective: 1000px;
+  list-style-type: none;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+.card img {
+  height: auto;
+  max-width: 100%;
+}
+
+.card .figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  backface-visibility: hidden;
+  text-align: center;
+  font-size: 19px ;
+  padding-top: 40px;
+}
+
+.card:hover .figcaption {
+  display: block;
+}
+
+.card:hover img {
+  transform: rotateY(180deg);
+  opacity: 0.3;
+}
+
+.card img, 
+.card .figcaption {
+  transition: transform 0.3s ease;
+}
+
+.major-arcana-title{ 
+  text-align: center;
+  color: white;
+  font-family: "Libre Baskerville";
+}
+
+.major-arcana-p {
+  color:white;
+  margin-left: 40px;
+  margin-right: 40px;
+  text-align: center;
+  padding: 2px;
+  font-family: "Libre Baskerville";
+  border: 1px solid rgba(0, 0, 0, 0.614);
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.53);
+}
+
+.tarot-desc{
+  color:white;
+}
+.tarot-titles {
+  color: rgb(243, 247, 6, 0.8);
+}
+
+.nav-links{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.nav-link{
+  color: white;
+  display: inline;
+  padding: 0px 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav-link:hover {
+  color: rgb(243, 247, 6)
+}
+
+.nav-icons{
+  text-align: right;
+}
+
+.header-img-ma {
+  padding: 0px;
+  margin:0px;
+  background-image:url("./images/major-arcana-med.jpg");
+  height: 100%;
+  position: relative;
+  width:100%;
+  opacity: 0.8;
+}
+
+.ma-header {
+  color: rgb(243, 247, 6);
+  font-size: 120px;
+  text-align: left;
+  padding-left: 30px;
+  width: 100px;
+  margin: 0px;
+  opacity: 1;
+}
+
+.suit-header-img {
+    padding: 0px;
+    margin:0px;
+    background-image:url("./images/sunmoon2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width:100%;
+    opacity: 0.8;
+    height: 250px;
+}
+
+.suit-header{
+  color: rgb(243, 247, 6);
+  font-size: 75px;
+  text-align: left;
+  padding-left: 30px;
+  padding-top: 165px;
+  margin: 0px;
+  opacity: 1;
+}
+
+.more-btn {
+  width: 90%;
+  padding: 20px 0px;
+  background-color: rgb(243, 247, 6, 0.8);
+  border: none;
+  border-radius: 7px;
+  bottom: 0;
+  color: white;
+}
+
+.single-card-img {
+  height: auto;
+  
+}
+
+.single-card-p {
+  color: white;
+}
+
+.footer-p {
+  color: white
+}
+
+.footer-right-img {
+  background-image: url("./images/footer-right.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  background-position: right;
+  margin-right: 100px;
+  margin-bottom: 10px;
+}
+.footer-left-img {
+  background-image: url("./images/footer-left.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  border-radius: 10px;
+  height: 100px;
+  background-position: left;
+  margin-left: 100px;
+  margin-bottom: 10px;
+}
+
+.single-card-page {
+  background-image: url("./images/border-background3.jpg");
+  opacity: 1;
+}
+
+.single-card-title{
+  color: rgb(243, 247, 6, 0.8);
+  text-shadow: 4px 3px rgb(0, 0, 0, 0.5);
+  font-size: 100px;
+  opacity: 1;
+  margin: 0px;
+}
+
+.single-container{
+ display: grid;
+ grid-template-columns: fit-content(400px) fit-content(500px);
+ grid-template-rows: fit-content(200px);
+ row-gap: 10px;
+ column-gap:10px;
+ justify-items: center;
+ align-items: center;
+ box-sizing: border-box;
+}
+
+.item-img{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  height: 500px;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: black;
+}
+
+.item-ast{
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: black;
+
+}
+
+.item-desc{
+ 
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: black;
+
+}
+
+
+.item-num{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: black;
+
+}
+
+
+
